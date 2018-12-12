@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Setting</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-label>Select Category</ion-label>
+        <ion-select [(ngModel)]="categories" (ionChange)="onCategorySelect()" name="categories" multiple="true">
+          <ion-option *ngFor="let category of categories" [value]="category">{{category}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-label>Number of post to display</ion-label>
+        <ion-select [(ngModel)]="postLimit" (ionChange)="onnumberOfItemToDisplaySelect()" name="postLimit">
+          <ion-option *ngFor="let item of numberOfItemToDisplay" [value]="item">{{item}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <button ion-item (click)="onClickResetPassword()">Reset Password</button>
+    <button ion-item (click)="onClickAbout()"> About</button>
+  </ion-list>
+</ion-content>

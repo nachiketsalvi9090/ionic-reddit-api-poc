@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Sign In</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <form #signInForm="ngForm" (ngSubmit)="onSingIn(signInForm)">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>
+          User Name
+        </ion-label>
+        <ion-input name="email" type="email" required ngModel></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>
+          Password
+        </ion-label>
+        <ion-input name="password" type="password" required ngModel></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button block type="submit" [disabled]="!signInForm.valid">Sign In</button>
+  </form>
+  <button ion-button block type="button" (click)="onClickSiignUp()">Sign Up</button>
+</ion-content>

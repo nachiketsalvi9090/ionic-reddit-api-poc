@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{post.data.author}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-card>
+    <img src="{{post.data.preview.images[0].source.url}}" />
+    <ion-card-content>
+      <ion-card-title>
+        {{post.data.title}}
+      </ion-card-title>
+      <ion-list>
+        <ion-item>
+          <ion-icon name="person" item-left></ion-icon>
+          Author
+          <ion-note item-right>
+            {{post.data.author}}
+          </ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="thumbs-up" item-left></ion-icon>
+          Scores
+          <ion-note item-right>
+            {{post.data.score}}
+          </ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="chatboxes" item-left></ion-icon>
+          Comments
+          <ion-note item-right>
+            {{post.data.num_comments}}
+          </ion-note>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
